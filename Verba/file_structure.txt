@@ -1,0 +1,36 @@
+/chatbot-app
+│
+├── /backend                # Backend FastAPI code
+│   ├── /app
+│   │   ├── __init__.py      # App initialization
+│   │   ├── main.py          # FastAPI main app
+│   │   ├── model.py         # Model loading and inference logic
+│   │   ├── requirements.txt # Backend dependencies
+│   │   ├── Dockerfile       # (Optional) For containerizing the backend
+│   │   └── /utils
+│   │       └── inference.py # Utility file for inference-related code
+│   └── /tests
+│       └── test_api.py      # Backend unit tests
+│
+├── /frontend                # Frontend React app code
+│   ├── /public
+│   │   └── index.html       # Entry point HTML
+│   ├── /src
+│   │   ├── /components
+│   │   │   ├── Sidebar.js   # Chat sidebar
+│   │   │   ├── ChatWindow.js# Main chat window
+│   │   │   ├── MessageInput.js # Message input box
+│   │   │   ├── ChatMessage.js  # Component for each message
+│   │   │   ├── Sidebar.css  # Sidebar styles
+│   │   │   ├── ChatWindow.css # Chat window styles
+│   │   │   ├── MessageInput.css # Message input styles
+│   │   │   └── ChatMessage.css  # Chat message styles
+│   │   ├── App.js           # Main React component
+│   │   ├── App.css          # Global CSS styles
+│   │   ├── index.js         # React entry point
+│   │   └── api.js           # Axios configuration for making API requests
+│   ├── package.json         # Frontend dependencies
+│   └── .env                 # Frontend environment variables (API URL, etc.)
+│
+├── README.md                # Project documentation
+└── docker-compose.yml       # (Optional) For running both backend & frontend in containers
