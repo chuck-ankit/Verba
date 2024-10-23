@@ -1,27 +1,31 @@
-# Verba: Multilingual Voice Assistant using Ollama Models (Multimodal)
+# Verba - Multilingual AI Chatbot with Fine-tuned Gemma LLM
 
-**Verba** is a powerful Multilingual Voice Assistant Application built using **Ollama models** (multimodal) and fine-tuned locally in a **WSL environment**. Verba understands and responds to user inputs in multiple languages by leveraging cutting-edge natural language processing (NLP) and automatic speech recognition (ASR) models. The project integrates **Whisper** for accurate voice-to-text transcription and Ollama’s language models for intelligent response generation.
+Verba is a multilingual chatbot application that leverages a fine-tuned version of the Gemma LLM model (based on `google/gemma-7b`). The model has been fine-tuned using LoRA on 15 Indian languages and English language instruction datasets. The chatbot is built using React for the frontend and Python with FastAPI for the backend.
 
-## Key Features
+## Features
 
-- **Multilingual Voice Interaction**: Supports voice inputs and text responses in multiple languages.
-- **Local Model Fine-tuning**: Fine-tunes Ollama models locally for custom language capabilities and improved performance.
-- **Speech-to-Text and Text-to-Speech Integration**: Utilizes Whisper for transcribing voice inputs and `gTTS` for speech synthesis to create an interactive experience.
-- **Performance Monitoring**: Includes tools to track model accuracy, latency, and overall performance during both training and inference.
-- **WSL Environment**: Fully operational on Windows Subsystem for Linux (WSL), providing a seamless local development and deployment workflow.
-- **Multimodal Support**: Potential for future enhancements to handle image-based queries and responses using multimodal data.
+- Supports multiple Indian languages (Hindi, Telugu, Marathi, Urdu, Assamese, Konkani, Nepali, Sindhi, Tamil, Kannada, Malayalam, Gujarati, Punjabi, Bengali, and Odia) as well as English.
+- Interactive and user-friendly chatbot interface built with React.
+- Fast and efficient inference using `unsloth` and HuggingFace libraries.
+- Deployed using FastAPI as the backend framework.
 
-## Project Components
+## Demo
 
-- **Ollama Model Fine-tuning**: Fine-tune the language models using multilingual datasets for improved contextual understanding.
-- **Voice Recognition**: Employ `speech_recognition` and Whisper to capture and transcribe voice inputs, which are then processed by the text model.
-- **Response Generation**: Handles user queries and generates intelligent responses from fine-tuned models.
-- **Text-to-Speech Output**: Converts generated responses into speech using `gTTS`, providing a complete voice assistant experience.
-- **Model Performance Monitoring**: Tracks essential metrics, including accuracy, latency, and model loss, ensuring high efficiency.
+You can interact with the chatbot by entering instructions in different languages, and the model will respond accordingly.
 
-## Installation and Setup
+## Tech Stack
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/chuck-ankit/Verba.git
-   cd verba
+- **Frontend**: React, HTML, CSS, JavaScript
+- **Backend**: FastAPI, Python
+- **Machine Learning**: Fine-tuned Gemma LLM model using `unsloth` for inference.
+- **Deployment**: Docker, FastAPI
+
+## Clone and Run the Project
+
+Follow these steps to set up the project on your local machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/chuck-ankit/Verba.git
+cd Verba
